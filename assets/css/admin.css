@@ -1,0 +1,80 @@
+/* Product Video Solution for WooCommerce by Sudipta Das (https://github.com/shiningsudipto) – product edit screen */
+#woocommerce-product-data ul.wc-tabs li.pvsw_video_options a::before {
+	content: "\f126"; /* dashicons-format-video */
+	font-family: dashicons;
+}
+
+.pvsw-admin .pvsw-choices {
+	display: inline-flex;
+	flex-wrap: wrap;
+	gap: 6px 18px;
+}
+
+.pvsw-admin .pvsw-choices-stacked {
+	flex-direction: column;
+}
+
+.pvsw-admin .pvsw-choices label {
+	float: none;
+	width: auto;
+	margin: 0;
+	padding: 0;
+}
+
+.pvsw-admin .pvsw-disabled {
+	opacity: 0.5;
+}
+
+.pvsw-admin .pvsw-file-name {
+	margin-left: 8px;
+	color: #50575e;
+}
+
+.pvsw-admin .pvsw-preview-wrap {
+	padding: 0 12px 9px 162px;
+}
+
+.pvsw-admin #pvsw-preview,
+.pvsw-admin .pvsw-yt-preview {
+	display: block;
+	width: 100%;
+	max-width: 420px;
+	border-radius: 6px;
+	background: #000;
+}
+
+.pvsw-admin .pvsw-thumb-img {
+	display: block;
+	margin-top: 8px;
+	max-width: 220px;
+	height: auto;
+	border-radius: 4px;
+	border: 1px solid #dcdcde;
+}
+
+.pvsw-admin .form-field .description {
+	display: block;
+	clear: both;
+	margin: 4px 0 0;
+}
+
+@media (max-width: 1280px) {
+	.pvsw-admin .pvsw-preview-wrap {
+		padding-left: 12px;
+	}
+}
+
+/* Settings page: play icon previews */
+.pvsw-i-bg {
+	fill: var(--pvsw-icon-bg);
+}
+
+.pvsw-i-fg {
+	fill: var(--pvsw-icon-color);
+}
+
+.pvsw-i-ring {
+	fill: rgba(0, 0, 0, 0.35);
+	stroke: var(--pvsw-icon-color);
+	stroke-width: 4;
+}

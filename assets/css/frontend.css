@@ -1,0 +1,109 @@
+/* Product Video Solution for WooCommerce by Sudipta Das (https://github.com/shiningsudipto) – front end */
+.pvsw-video-wrap {
+	box-sizing: border-box;
+	width: 100%;
+}
+
+.pvsw-video {
+	position: relative;
+	width: 100%;
+	aspect-ratio: 16 / 9;
+	background: #000;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.pvsw-video iframe,
+.pvsw-video video,
+.pvsw-video img {
+	position: absolute;
+	inset: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+	display: block;
+	max-width: none;
+}
+
+.pvsw-video > video {
+	object-fit: contain;
+	cursor: pointer;
+}
+
+.pvsw-video > video[controls] {
+	cursor: auto;
+}
+
+.pvsw-poster {
+	all: unset;
+	position: absolute;
+	inset: 0;
+	display: block;
+	cursor: pointer;
+}
+
+.pvsw-poster img,
+.pvsw-poster video {
+	object-fit: cover;
+	pointer-events: none;
+}
+
+.pvsw-poster:focus-visible {
+	outline: 3px solid var(--pvsw-icon-bg, #789579);
+	outline-offset: -3px;
+}
+
+.pvsw-icon {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: var(--pvsw-icon-size, 72px);
+	height: var(--pvsw-icon-size, 72px);
+	transform: translate(-50%, -50%);
+	transition: transform 0.2s ease;
+	filter: drop-shadow(0 4px 14px rgba(0, 0, 0, 0.35));
+}
+
+.pvsw-poster:hover .pvsw-icon,
+.pvsw-poster:focus-visible .pvsw-icon {
+	transform: translate(-50%, -50%) scale(1.08);
+}
+
+.pvsw-icon svg {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+.pvsw-i-bg {
+	fill: var(--pvsw-icon-bg, #789579);
+}
+
+.pvsw-i-fg {
+	fill: var(--pvsw-icon-color, #fff);
+}
+
+.pvsw-i-ring {
+	fill: rgba(0, 0, 0, 0.35);
+	stroke: var(--pvsw-icon-color, #fff);
+	stroke-width: 4;
+}
+
+/* Elementor editor placeholder */
+.pvsw-placeholder {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 20px;
+	background: repeating-linear-gradient(45deg, #f4f6f3, #f4f6f3 12px, #eaefe8 12px, #eaefe8 24px);
+	border: 2px dashed #b8cda9;
+	color: #425e4b;
+	font-size: 14px;
+	text-align: center;
+}
+
+@media (prefers-reduced-motion: reduce) {
+	.pvsw-icon {
+		transition: none;
+	}
+}
